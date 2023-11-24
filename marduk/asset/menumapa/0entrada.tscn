@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asset/menumapa/0entrada.gd" type="Script" id=1]
+[ext_resource path="res://asset/menumapa/1280x720mapa0.png" type="Texture" id=2]
+
+[node name="entra" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2( 10, 10 )
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = 10.6
+margin_top = 8.4
+margin_right = 56.6
+margin_bottom = 22.4
+text = "Markuk"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
