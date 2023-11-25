@@ -70,7 +70,8 @@ func _physics_process(delta):
 		
 #		get_node("AnimatedSprite").flip_h(true)
 	else:
-		get_node("AnimatedSprite").stop()
+		anima = "parado"
+		get_node("AnimatedSprite").play(anima)
 #		get_node("AnimatedSprite").play("camiDere")
 	#	$AnimatedSprite.camiDere.play()
 	

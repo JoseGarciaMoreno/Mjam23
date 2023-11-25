@@ -1,10 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://joystick/virtual_joystick.tscn" type="PackedScene" id=1]
 [ext_resource path="res://caracter/Caracter.gd" type="Script" id=2]
 [ext_resource path="res://asset/bala/fusil.tscn" type="PackedScene" id=3]
+[ext_resource path="res://joystick/textures/joystick_base_outline2.png" type="Texture" id=4]
+[ext_resource path="res://caracter/hud.gd" type="Script" id=5]
+[ext_resource path="res://joystick/textures/joystick_base_outline.png" type="Texture" id=6]
 
 [sub_resource type="BoxShape" id=1]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "no_pulsa",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "pulsa",
+"speed": 5.0
+} ]
 
 [node name="Caracter" type="KinematicBody"]
 script = ExtResource( 2 )
@@ -23,17 +39,40 @@ depth = 2.926
 [node name="Control" type="Control" parent="."]
 anchor_right = 0.993
 anchor_bottom = 1.0
-margin_right = 0.167969
+margin_left = 4.0
+margin_top = -3.0
+margin_right = 54.9601
+margin_bottom = 41.0
 
 [node name="Virtual joystick" parent="Control" instance=ExtResource( 1 )]
-margin_left = 470.0
-margin_top = -240.0
-margin_right = 726.0
-margin_bottom = -19.0
+margin_left = 678.0
+margin_top = -421.0
+margin_right = 894.0
+margin_bottom = -193.0
 clampzone_size = 76.0
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.845113, 0.534588, 0, -0.534588, 0.845113, 0, 4.03298, 3.5927 )
 
 [node name="fusil" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.0571459, 0, 0.998366, 0, 1, 0, -0.998366, 0, 0.0571459, 0.0636101, 0.926224, -4.4267 )
+transform = Transform( 0.0571459, 0, 0.998366, 0, 1, 0, -0.998366, 0, 0.0571459, 0.0636101, 0.926224, -1.49783 )
+
+[node name="hud" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="hud"]
+margin_left = 61.0
+margin_top = 173.0
+margin_right = 300.0
+margin_bottom = 415.0
+
+[node name="Timer" type="Timer" parent="hud/TextureButton"]
+one_shot = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="hud/TextureButton"]
+position = Vector2( 121, 118 )
+frames = SubResource( 2 )
+animation = "pulsa"
+
+[connection signal="pressed" from="hud/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="hud/TextureButton/Timer" to="." method="_on_Timer_timeout"]

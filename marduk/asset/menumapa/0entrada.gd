@@ -7,7 +7,8 @@ func _ready():
 func load_main_menu():
 	print("hola")
 	# Cambiar a la escena del menú principal.
-	var _juego = get_tree().change_scene("res://escenarios2d/pantalla0/pantalla0.tscn")
+#	var _juego = get_tree().change_scene("res://escenarios2d/pantalla0/pantalla0.tscn")
+	var _juego = get_tree().change_scene("res://escenarios/mundo.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
