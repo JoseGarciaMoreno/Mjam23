@@ -7,7 +7,7 @@ var damage = 10  # Daño causado por la bala
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_as_toplevel(true)
-	$"Timer".start()
+	$"Timer".start(3)
 	apply_impulse(transform.basis.x, transform.basis.x * speed)
 	pass # Replace with function body.
 

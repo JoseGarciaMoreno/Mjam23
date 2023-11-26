@@ -23,7 +23,7 @@ func _on_TimerGO_timeout():
 		get_node("hud/Label").set_text(str(tiempo))
 		get_node("TimerGO").start()
 	
-	elif ((tiempo == 1)):
+	elif ((tiempo == 1) and !go ):
 		go = true
 		tiempo -=1
 		get_node("hud/Label").set_text("Game Over por tiempo")

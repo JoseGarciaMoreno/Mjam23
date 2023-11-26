@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/narra-respu.mp3-4cb2ad4cfdc508061f93af55ecbc7990.mp3str"
+
+[deps]
+
+source_file="res://asset/entrada/narra-respu.mp3"
+dest_files=[ "res://.import/narra-respu.mp3-4cb2ad4cfdc508061f93af55ecbc7990.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
