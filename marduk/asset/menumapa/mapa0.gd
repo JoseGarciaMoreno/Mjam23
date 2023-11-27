@@ -17,5 +17,5 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	var _juego = get_tree().change_scene("res://escenarios/mundo.tscn")
+	var _juego = get_tree().change_scene("res://escenarios/mundo2/mundo2.tscn")
 	pass # Replace with function body.

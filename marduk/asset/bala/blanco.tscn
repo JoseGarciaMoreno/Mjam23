@@ -25,7 +25,8 @@ material_override = SubResource( 2 )
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.446264, 0 )
 
 [node name="win" type="Sprite" parent="."]
-position = Vector2( 280, 20 )
+position = Vector2( 486, 180 )
+scale = Vector2( 1.55, 1.79667 )
 texture = ExtResource( 2 )
 centered = false
 

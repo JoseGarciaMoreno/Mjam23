@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://asset/menumapa/mapa0.gd" type="Script" id=1]
 [ext_resource path="res://asset/menumapa/1280x720mapa0.png" type="Texture" id=2]
+[ext_resource path="res://asset/menumapa/Ashes.mp3" type="AudioStream" id=3]
+[ext_resource path="res://asset/entrada/mar1.png" type="Texture" id=4]
 
 [node name="mapa0" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,5 +15,15 @@ centered = false
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_right = 1373.0
 margin_bottom = 837.0
+
+[node name="musi" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -18.0
+autoplay = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 672, 238 )
+scale = Vector2( 0.347949, 0.329792 )
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ashes.mp3-8e92e6170c9186fa26f17f040a5a8020.mp3str"
+
+[deps]
+
+source_file="res://asset/menumapa/Ashes.mp3"
+dest_files=[ "res://.import/Ashes.mp3-8e92e6170c9186fa26f17f040a5a8020.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

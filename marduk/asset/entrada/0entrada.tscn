@@ -200,7 +200,7 @@ anims/animalimon = SubResource( 2 )
 
 [node name="golpe" type="AudioStreamPlayer" parent="AnimationPlayer"]
 stream = ExtResource( 7 )
-volume_db = -20.0
+volume_db = -32.0
 
 [node name="TimerGolpe" type="Timer" parent="AnimationPlayer/golpe"]
 wait_time = 0.6
