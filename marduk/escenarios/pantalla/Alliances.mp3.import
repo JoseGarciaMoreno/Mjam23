@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Alliances.mp3-ffcb83eec85e767d0cf409544c301a19.mp3str"
+
+[deps]
+
+source_file="res://escenarios/pantalla/Alliances.mp3"
+dest_files=[ "res://.import/Alliances.mp3-ffcb83eec85e767d0cf409544c301a19.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

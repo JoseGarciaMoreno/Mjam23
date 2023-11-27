@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://escenarios/pantalla/agua.jpg" type="Texture" id=1]
 [ext_resource path="res://caracter/Caracter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenarios/pantalla/Alliances.mp3" type="AudioStream" id=3]
 [ext_resource path="res://asset/bala/blanco.tscn" type="PackedScene" id=4]
 [ext_resource path="res://asset/tempo_go/tempoGO.tscn" type="PackedScene" id=5]
 [ext_resource path="res://escenarios/pantalla/ladrillosTile.tres" type="MeshLibrary" id=6]
@@ -17,13 +18,16 @@ uv1_scale = Vector3( 40, 40, 0 )
 [node name="malos" type="Spatial" parent="."]
 
 [node name="blanco" parent="malos" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0.000593412, 0, 1, 0, -0.000593412, 0, 1, 19.4478, 1.90735e-06, -2.87678 )
+transform = Transform( 1, 0, 0.000593412, 0, 1, 0, -0.000593412, 0, 1, -0.809715, 1.90735e-06, -17.5769 )
 
 [node name="blanco3" parent="malos" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0.000593412, 0, 1, 0, -0.000593412, 0, 1, -0.177979, 1.90735e-06, -13.303 )
+transform = Transform( 1, 0, 0.000593412, 0, 1, 0, -0.000593412, 0, 1, 55.4967, 1.90735e-06, 1.72264 )
 
 [node name="blanco2" parent="malos" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.37904, 0, 40.8313 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4967, 0, 20.911 )
+
+[node name="blanco4" parent="malos" instance=ExtResource( 4 )]
+transform = Transform( 0.558831, 0, 0.829281, 0, 1, 0, -0.829281, 0, 0.558831, 11.2059, 0, 40.5562 )
 
 [node name="Caracter" parent="." instance=ExtResource( 2 )]
 
@@ -43,3 +47,8 @@ __meta__ = {
 transform = Transform( 291.017, 0, 0, 0, 1, 0, 0, 0, 259.727, 0, -5.44092, 0 )
 mesh = SubResource( 1 )
 material = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -30.0
+autoplay = true

@@ -28,6 +28,10 @@ config/icon="res://icon.png"
 
 enable_audio_input=true
 
+[autoload]
+
+Glob="*res://escenarios/glob.gd"
+
 [display]
 
 window/size/width=1280
