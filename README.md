@@ -1,6 +1,11 @@
 # Mjam23
 Prototipo para game jam de 48 horas
 
+https://josegar.itch.io/marduk 
+
+https://itch.io/jam/mjam23/rate/2389174
+
+
 2023/11/24 
 🕥 01:30: plataformas 2d reccilcado de escrip + configuración de animacines
 
